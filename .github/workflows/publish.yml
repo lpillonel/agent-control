@@ -1,0 +1,66 @@
+name: publish
+
+# Runs automatically on every merge to main -- the pre-merge gate in checks.yml
+# is the only validation this pipeline has, so nothing further blocks this
+# step. workflow_dispatch is kept only as a manual escape hatch (e.g. a retry
+# after a transient failure).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# contents: write is for the tag push back into agent-control below -- that
+# only touches refs/tags/*, never refs/heads/main, so it does not need a
+# bypass of this repo's branch protection.
+permissions:
+  contents: write
+
+# Never two publishes at once: both would derive versions from the same tags.
+# cancel-in-progress: false queues instead of cancelling, and since packing
+# always reflects the current state of main, a queued run superseded by a
+# newer one loses no work -- the newer run already covers everything the
+# older one would have.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require a marketplace token
+        env:
+          MARKETPLACE_TOKEN: ${{ secrets.MARKETPLACE_TOKEN }}
+        run: |
+          if [ -z "$MARKETPLACE_TOKEN" ]; then
+            echo "::error::agent-marketplace is private and this workflow pushes" \
+                 "to it. Set the MARKETPLACE_TOKEN secret to a PAT with" \
+                 "contents:write on imtf-group/agent-marketplace."
+            exit 1
+          fi
+
+      - name: Check out agent-control
+        uses: actions/checkout@v5
+        with:
+          path: agent-control
+          # Tags are the per-package baseline for changed(); a shallow clone
+          # would see none and every package would look changed.
+          fetch-depth: 0
+
+      - name: Check out agent-marketplace
+        uses: actions/checkout@v5
+        with:
+          # TODO: update once agent-marketplace exists on GitHub.
+          repository: imtf-group/agent-marketplace
+          path: agent-marketplace
+          fetch-depth: 0
+          token: ${{ secrets.MARKETPLACE_TOKEN }}
+
+      - name: Identify the committer
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Pack and publish
+        working-directory: agent-control
+        run: python3 scripts/publish.py --repo . --marketplace ../agent-marketplace --push

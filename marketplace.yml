@@ -1,0 +1,12 @@
+# Package metadata for the published marketplace manifests. Read only by
+# scripts/publish.py -- not by APM, and not copied into agent-marketplace,
+# which carries no config of its own. `category` lives here rather than in
+# each package's own apm.yml because it is marketplace-only data.
+#
+# Every packages/<dir> needs an entry here, and an entry with no package left
+# is reported as orphaned by scripts/check.py rather than quietly published.
+packages:
+  - name: example
+    source: packages/example
+    description: Minimal example skill, proving the agent-control -> agent-marketplace publish pipeline end to end.
+    category: Development

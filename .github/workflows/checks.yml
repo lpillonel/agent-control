@@ -1,0 +1,26 @@
+name: checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    name: workspace gates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out agent-control
+        uses: actions/checkout@v5
+
+      - name: Run the pre-merge gate
+        # This is the only validation in the whole pipeline: everything that
+        # reaches agent-marketplace has already passed this, so the
+        # marketplace repo carries no gate of its own.
+        run: python3 scripts/check.py --repo .

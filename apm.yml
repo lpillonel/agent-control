@@ -1,0 +1,22 @@
+name: agent-control
+version: 0.1.0
+description: Source of truth for IMTF-managed agent skills -- authored here, published to agent-marketplace.
+author: imtf-group
+license: LicenseRef-IMTF-Proprietary
+
+includes: auto
+
+dependencies:
+  apm: []
+  mcp: []
+
+# agent-marketplace carries no APM configuration of its own -- package
+# metadata for the published manifests (description, category) lives in
+# marketplace.yml here instead. See scripts/publish.py.
+scripts:
+  # The pre-merge gate. No marketplace checkout needed.
+  check: "python scripts/check.py --repo ."
+  # Preview what a publish would bump and pack, writing nothing.
+  publish-dry-run: "python scripts/publish.py --repo . --marketplace ../agent-marketplace --dry-run"
+  # Pack, commit, tag and push both repos. What the CI publish workflow runs.
+  publish: "python scripts/publish.py --repo . --marketplace ../agent-marketplace --push"

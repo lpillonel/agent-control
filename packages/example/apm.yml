@@ -1,0 +1,8 @@
+name: example
+version: 0.1.0
+description: Minimal example skill, proving the agent-control -> agent-marketplace publish pipeline end to end.
+license: LicenseRef-IMTF-Proprietary
+
+# This version is for `apm install` fidelity only -- the marketplace version
+# published to agent-marketplace is calendar-based and derived from git tags
+# by scripts/publish.py, not from this field.
