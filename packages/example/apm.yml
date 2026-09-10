@@ -16,7 +16,7 @@ includes: auto
 dependencies:
   apm:
     # mattpocock/skills (MIT) — requirement extraction before planning:
-    - mattpocock/skills/skills/productivity/grill-me#2ab958093e83e0ec752e6c1c5932da465bf23e0c
+    - mattpocock/skills/skills/productivity/grill-me#6acc160e4e0cd062dbbbd7a1b26ae92855edf07e # v1.2.3
 
 scripts:
   # Resolve dependencies + record provenance, then pack a self-contained
