@@ -10,3 +10,10 @@ apm_modules/
 
 # apm pack output
 build/
+
+# apm install output -- regenerate with `apm install` from a package's own
+# .apm/ source + apm.yml/apm.lock.yaml; keeping them out of git avoids
+# tracking every skill 3x (.apm/, .agents/, .claude/).
+packages/*/.claude/
+packages/*/.agents/
+packages/*/.codex/
