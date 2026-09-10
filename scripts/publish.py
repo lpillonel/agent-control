@@ -60,12 +60,29 @@ def last_tag_versions(repo, name):
     return sorted(versions, reverse=True)
 
 
+# What actually ends up in a published bundle. apm's install-time deploy
+# dirs (.claude/, .agents/, .codex/) are deliberately excluded -- they're
+# regenerated, gitignored build output, so a commit that only touches them
+# (e.g. cleaning up tracked copies) must not look like a package change.
+CONTENT_PATHS = (
+    ".apm",
+    "apm.yml",
+    "apm.lock.yaml",
+    "skills",
+    "commands",
+    "agents",
+    "LICENSE",
+    "LICENSES",
+)
+
+
 def changed(repo, name, source):
     versions = last_tag_versions(repo, name)
     if not versions:
         return True, None
     tag = f"{name}@{versions[0]}"
-    commits = gitutil.git(["log", f"{tag}..HEAD", "--oneline", "--", source], repo)
+    paths = [os.path.join(source, p) for p in CONTENT_PATHS]
+    commits = gitutil.git(["log", f"{tag}..HEAD", "--oneline", "--", *paths], repo)
     return bool(commits), tag
 
 
