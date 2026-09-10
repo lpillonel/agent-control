@@ -23,6 +23,9 @@ scripts:
   # ".", so only --marketplace (not derivable -- its sibling path varies per
   # clone) needs spelling out below.
   check: "python3 scripts/check.py"
+  # Loops `apm outdated` over every packages/*. Informational only -- run
+  # `apm update [-y]` inside a specific package to actually upgrade it.
+  outdated: "python3 scripts/outdated.py"
   # Preview what a publish would bump and pack, writing nothing.
   publish-dry-run: "python3 scripts/publish.py --marketplace ../agent-marketplace --dry-run"
   # Pack, commit, and tag both repos locally (no push -- see scripts/publish.py --help).
