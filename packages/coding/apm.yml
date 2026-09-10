@@ -1,0 +1,20 @@
+name: coding
+version: 0.1.0
+description: IMTF coding guideline and ADR skills, vendored from imtf-group/agents-marketplace.
+license: LicenseRef-IMTF-Proprietary
+
+targets:
+  - claude
+  - codex
+
+includes: auto
+
+# Explicit (even though empty) -- apm pack produces no bundle at all if
+# 'dependencies:' is absent, and this package has no external deps.
+dependencies: {}
+
+scripts:
+  # Resolve dependencies + record provenance, then pack a self-contained
+  # bundle (plugin.json + skills/) needing no apm.yml and no network to
+  # install -- see packages/example/apm.yml for the same pattern.
+  pack: "apm install --frozen && apm pack --format agent-plugin -o build --archive --force"

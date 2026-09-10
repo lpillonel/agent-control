@@ -1,0 +1,703 @@
+lockfile_version: '1'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0001-record-architecture-decisions
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0001-record-architecture-decisions/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:9350421827fb8a1db518c1daf4c274e5babc13f2b1de21f2e0c82a0e9dbd07c0
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0002-logging-guideline
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0002-logging-guideline/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:99584daf63d70b64cc16f2a436a79cd33638578d49840c8286386db4ede46800
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0003-pr-nd-commit-naming-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b66e00aee2bedd10c0baae2cda0b7f8100674dd1f14950d476e20b76c80b46c4
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0004-pr-template
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0004-pr-template/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3f5c969a1ca20b777bbcceade66bedf1dc3ad9e46cec03e4ca501d6bd8fc056f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0005-env-variables-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0005-env-variables-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:92ba354a4167dfc3a1e7ce9320ad5956d46129feac61bbee53b00b06a36fb804
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0006-rustfs-for-development
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0006-rustfs-for-development/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f2b35d263b56763b1e23c99f8306b7fcf86e3577ecf17abf3f843fc9ddbfb0ca
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0007-oidc-env-vars-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0007-oidc-env-vars-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b3eaad7627ad0704c5be82d7431644dfe854b6eec482bb69ef4febdd575340f5
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0008-quarkus-multi-db-on-openshift
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:0a7eccb7bbd7880045eb243f63a66913922e7b44068c43eb4f7ef3b0831bfe3b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0009-presigned-urls
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0009-presigned-urls/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e3e1f08396e5a29420676e35e7ba6d626ec1768b20a9c6fec4e1b0f5ce88400c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adr-0009-presigned-urls/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e98611867688453a3f6ca8f99942b72b7a4c5fd0c805d591ee6e08f54fd92c95
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0001-kafka
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0001-kafka/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:8b2b701b8de7d1e99bc79effd0d1ab17301d56895f69283afa70fd211b240ec2
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0001-kafka/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:09907d7a717b2f044bd27e7c9172ce2f9c1cedd04531ccd4010b07a74836b4d9
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0002-observability
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0002-observability/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:703ffb8c41c7accf1551c471d30d5895dbc453c000b5c02e4e1b90685164d610
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0003-rest
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0003-rest/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:5d72909317f9dfddd20ee4cdccc68ead1e9f422d37d2eece5d6705eaaf15e6da
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0003-rest/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:6f3c6704aae98209e159306bb2e7e9c5fbdb5f1fee0920b6d469a7e7b6ff815e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0004-ai-guidelines
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0004-ai-guidelines/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b2b8aa233ce90bbabd2d95680c918eac0bd5c3c67d95d8d020fd819da36cf3c7
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0004-ai-guidelines/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1a34de38021dcc29bead239c77efec9dbcf82d6bf5739a4734ad31ac78617b33
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0005-logging-guideline
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0005-logging-guideline/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:68f307958e86c7fa735cb86686f8dc90e1f85908775270a47a8770cdf1e926b5
+- kind: project-relative
+  target: claude
+  value: .claude/skills/guideline-0005-logging-guideline/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3c8f592b72efc579ae301e87808270e3b3c0db9be10847f7511c2376d6d15ce0
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0001-record-architecture-decisions
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0001-record-architecture-decisions/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:9350421827fb8a1db518c1daf4c274e5babc13f2b1de21f2e0c82a0e9dbd07c0
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0002-logging-guideline
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0002-logging-guideline/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:99584daf63d70b64cc16f2a436a79cd33638578d49840c8286386db4ede46800
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0003-pr-nd-commit-naming-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b66e00aee2bedd10c0baae2cda0b7f8100674dd1f14950d476e20b76c80b46c4
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0004-pr-template
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0004-pr-template/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3f5c969a1ca20b777bbcceade66bedf1dc3ad9e46cec03e4ca501d6bd8fc056f
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0005-env-variables-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0005-env-variables-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:92ba354a4167dfc3a1e7ce9320ad5956d46129feac61bbee53b00b06a36fb804
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0006-rustfs-for-development
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0006-rustfs-for-development/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f2b35d263b56763b1e23c99f8306b7fcf86e3577ecf17abf3f843fc9ddbfb0ca
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0007-oidc-env-vars-convention
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0007-oidc-env-vars-convention/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b3eaad7627ad0704c5be82d7431644dfe854b6eec482bb69ef4febdd575340f5
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0008-quarkus-multi-db-on-openshift
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:0a7eccb7bbd7880045eb243f63a66913922e7b44068c43eb4f7ef3b0831bfe3b
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0009-presigned-urls
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0009-presigned-urls/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e3e1f08396e5a29420676e35e7ba6d626ec1768b20a9c6fec4e1b0f5ce88400c
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/adr-0009-presigned-urls/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e98611867688453a3f6ca8f99942b72b7a4c5fd0c805d591ee6e08f54fd92c95
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0001-kafka
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0001-kafka/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:8b2b701b8de7d1e99bc79effd0d1ab17301d56895f69283afa70fd211b240ec2
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0001-kafka/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:09907d7a717b2f044bd27e7c9172ce2f9c1cedd04531ccd4010b07a74836b4d9
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0002-observability
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0002-observability/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:703ffb8c41c7accf1551c471d30d5895dbc453c000b5c02e4e1b90685164d610
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0003-rest
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0003-rest/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:5d72909317f9dfddd20ee4cdccc68ead1e9f422d37d2eece5d6705eaaf15e6da
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0003-rest/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:6f3c6704aae98209e159306bb2e7e9c5fbdb5f1fee0920b6d469a7e7b6ff815e
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0004-ai-guidelines
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0004-ai-guidelines/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:b2b8aa233ce90bbabd2d95680c918eac0bd5c3c67d95d8d020fd819da36cf3c7
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0004-ai-guidelines/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1a34de38021dcc29bead239c77efec9dbcf82d6bf5739a4734ad31ac78617b33
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0005-logging-guideline
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0005-logging-guideline/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:68f307958e86c7fa735cb86686f8dc90e1f85908775270a47a8770cdf1e926b5
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/guideline-0005-logging-guideline/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:3c8f592b72efc579ae301e87808270e3b3c0db9be10847f7511c2376d6d15ce0
+local_deployed_files:
+- .agents/skills/adr-0001-record-architecture-decisions
+- .agents/skills/adr-0001-record-architecture-decisions/SKILL.md
+- .agents/skills/adr-0002-logging-guideline
+- .agents/skills/adr-0002-logging-guideline/SKILL.md
+- .agents/skills/adr-0003-pr-nd-commit-naming-convention
+- .agents/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md
+- .agents/skills/adr-0004-pr-template
+- .agents/skills/adr-0004-pr-template/SKILL.md
+- .agents/skills/adr-0005-env-variables-convention
+- .agents/skills/adr-0005-env-variables-convention/SKILL.md
+- .agents/skills/adr-0006-rustfs-for-development
+- .agents/skills/adr-0006-rustfs-for-development/SKILL.md
+- .agents/skills/adr-0007-oidc-env-vars-convention
+- .agents/skills/adr-0007-oidc-env-vars-convention/SKILL.md
+- .agents/skills/adr-0008-quarkus-multi-db-on-openshift
+- .agents/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md
+- .agents/skills/adr-0009-presigned-urls
+- .agents/skills/adr-0009-presigned-urls/SKILL.md
+- .agents/skills/adr-0009-presigned-urls/reference.md
+- .agents/skills/guideline-0001-kafka
+- .agents/skills/guideline-0001-kafka/SKILL.md
+- .agents/skills/guideline-0001-kafka/reference.md
+- .agents/skills/guideline-0002-observability
+- .agents/skills/guideline-0002-observability/SKILL.md
+- .agents/skills/guideline-0003-rest
+- .agents/skills/guideline-0003-rest/SKILL.md
+- .agents/skills/guideline-0003-rest/reference.md
+- .agents/skills/guideline-0004-ai-guidelines
+- .agents/skills/guideline-0004-ai-guidelines/SKILL.md
+- .agents/skills/guideline-0004-ai-guidelines/reference.md
+- .agents/skills/guideline-0005-logging-guideline
+- .agents/skills/guideline-0005-logging-guideline/SKILL.md
+- .agents/skills/guideline-0005-logging-guideline/reference.md
+- .claude/skills/adr-0001-record-architecture-decisions
+- .claude/skills/adr-0001-record-architecture-decisions/SKILL.md
+- .claude/skills/adr-0002-logging-guideline
+- .claude/skills/adr-0002-logging-guideline/SKILL.md
+- .claude/skills/adr-0003-pr-nd-commit-naming-convention
+- .claude/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md
+- .claude/skills/adr-0004-pr-template
+- .claude/skills/adr-0004-pr-template/SKILL.md
+- .claude/skills/adr-0005-env-variables-convention
+- .claude/skills/adr-0005-env-variables-convention/SKILL.md
+- .claude/skills/adr-0006-rustfs-for-development
+- .claude/skills/adr-0006-rustfs-for-development/SKILL.md
+- .claude/skills/adr-0007-oidc-env-vars-convention
+- .claude/skills/adr-0007-oidc-env-vars-convention/SKILL.md
+- .claude/skills/adr-0008-quarkus-multi-db-on-openshift
+- .claude/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md
+- .claude/skills/adr-0009-presigned-urls
+- .claude/skills/adr-0009-presigned-urls/SKILL.md
+- .claude/skills/adr-0009-presigned-urls/reference.md
+- .claude/skills/guideline-0001-kafka
+- .claude/skills/guideline-0001-kafka/SKILL.md
+- .claude/skills/guideline-0001-kafka/reference.md
+- .claude/skills/guideline-0002-observability
+- .claude/skills/guideline-0002-observability/SKILL.md
+- .claude/skills/guideline-0003-rest
+- .claude/skills/guideline-0003-rest/SKILL.md
+- .claude/skills/guideline-0003-rest/reference.md
+- .claude/skills/guideline-0004-ai-guidelines
+- .claude/skills/guideline-0004-ai-guidelines/SKILL.md
+- .claude/skills/guideline-0004-ai-guidelines/reference.md
+- .claude/skills/guideline-0005-logging-guideline
+- .claude/skills/guideline-0005-logging-guideline/SKILL.md
+- .claude/skills/guideline-0005-logging-guideline/reference.md
+local_deployed_file_hashes:
+  .agents/skills/adr-0001-record-architecture-decisions/SKILL.md: sha256:9350421827fb8a1db518c1daf4c274e5babc13f2b1de21f2e0c82a0e9dbd07c0
+  .agents/skills/adr-0002-logging-guideline/SKILL.md: sha256:99584daf63d70b64cc16f2a436a79cd33638578d49840c8286386db4ede46800
+  .agents/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md: sha256:b66e00aee2bedd10c0baae2cda0b7f8100674dd1f14950d476e20b76c80b46c4
+  .agents/skills/adr-0004-pr-template/SKILL.md: sha256:3f5c969a1ca20b777bbcceade66bedf1dc3ad9e46cec03e4ca501d6bd8fc056f
+  .agents/skills/adr-0005-env-variables-convention/SKILL.md: sha256:92ba354a4167dfc3a1e7ce9320ad5956d46129feac61bbee53b00b06a36fb804
+  .agents/skills/adr-0006-rustfs-for-development/SKILL.md: sha256:f2b35d263b56763b1e23c99f8306b7fcf86e3577ecf17abf3f843fc9ddbfb0ca
+  .agents/skills/adr-0007-oidc-env-vars-convention/SKILL.md: sha256:b3eaad7627ad0704c5be82d7431644dfe854b6eec482bb69ef4febdd575340f5
+  .agents/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md: sha256:0a7eccb7bbd7880045eb243f63a66913922e7b44068c43eb4f7ef3b0831bfe3b
+  .agents/skills/adr-0009-presigned-urls/SKILL.md: sha256:e3e1f08396e5a29420676e35e7ba6d626ec1768b20a9c6fec4e1b0f5ce88400c
+  .agents/skills/adr-0009-presigned-urls/reference.md: sha256:e98611867688453a3f6ca8f99942b72b7a4c5fd0c805d591ee6e08f54fd92c95
+  .agents/skills/guideline-0001-kafka/SKILL.md: sha256:8b2b701b8de7d1e99bc79effd0d1ab17301d56895f69283afa70fd211b240ec2
+  .agents/skills/guideline-0001-kafka/reference.md: sha256:09907d7a717b2f044bd27e7c9172ce2f9c1cedd04531ccd4010b07a74836b4d9
+  .agents/skills/guideline-0002-observability/SKILL.md: sha256:703ffb8c41c7accf1551c471d30d5895dbc453c000b5c02e4e1b90685164d610
+  .agents/skills/guideline-0003-rest/SKILL.md: sha256:5d72909317f9dfddd20ee4cdccc68ead1e9f422d37d2eece5d6705eaaf15e6da
+  .agents/skills/guideline-0003-rest/reference.md: sha256:6f3c6704aae98209e159306bb2e7e9c5fbdb5f1fee0920b6d469a7e7b6ff815e
+  .agents/skills/guideline-0004-ai-guidelines/SKILL.md: sha256:b2b8aa233ce90bbabd2d95680c918eac0bd5c3c67d95d8d020fd819da36cf3c7
+  .agents/skills/guideline-0004-ai-guidelines/reference.md: sha256:1a34de38021dcc29bead239c77efec9dbcf82d6bf5739a4734ad31ac78617b33
+  .agents/skills/guideline-0005-logging-guideline/SKILL.md: sha256:68f307958e86c7fa735cb86686f8dc90e1f85908775270a47a8770cdf1e926b5
+  .agents/skills/guideline-0005-logging-guideline/reference.md: sha256:3c8f592b72efc579ae301e87808270e3b3c0db9be10847f7511c2376d6d15ce0
+  .claude/skills/adr-0001-record-architecture-decisions/SKILL.md: sha256:9350421827fb8a1db518c1daf4c274e5babc13f2b1de21f2e0c82a0e9dbd07c0
+  .claude/skills/adr-0002-logging-guideline/SKILL.md: sha256:99584daf63d70b64cc16f2a436a79cd33638578d49840c8286386db4ede46800
+  .claude/skills/adr-0003-pr-nd-commit-naming-convention/SKILL.md: sha256:b66e00aee2bedd10c0baae2cda0b7f8100674dd1f14950d476e20b76c80b46c4
+  .claude/skills/adr-0004-pr-template/SKILL.md: sha256:3f5c969a1ca20b777bbcceade66bedf1dc3ad9e46cec03e4ca501d6bd8fc056f
+  .claude/skills/adr-0005-env-variables-convention/SKILL.md: sha256:92ba354a4167dfc3a1e7ce9320ad5956d46129feac61bbee53b00b06a36fb804
+  .claude/skills/adr-0006-rustfs-for-development/SKILL.md: sha256:f2b35d263b56763b1e23c99f8306b7fcf86e3577ecf17abf3f843fc9ddbfb0ca
+  .claude/skills/adr-0007-oidc-env-vars-convention/SKILL.md: sha256:b3eaad7627ad0704c5be82d7431644dfe854b6eec482bb69ef4febdd575340f5
+  .claude/skills/adr-0008-quarkus-multi-db-on-openshift/SKILL.md: sha256:0a7eccb7bbd7880045eb243f63a66913922e7b44068c43eb4f7ef3b0831bfe3b
+  .claude/skills/adr-0009-presigned-urls/SKILL.md: sha256:e3e1f08396e5a29420676e35e7ba6d626ec1768b20a9c6fec4e1b0f5ce88400c
+  .claude/skills/adr-0009-presigned-urls/reference.md: sha256:e98611867688453a3f6ca8f99942b72b7a4c5fd0c805d591ee6e08f54fd92c95
+  .claude/skills/guideline-0001-kafka/SKILL.md: sha256:8b2b701b8de7d1e99bc79effd0d1ab17301d56895f69283afa70fd211b240ec2
+  .claude/skills/guideline-0001-kafka/reference.md: sha256:09907d7a717b2f044bd27e7c9172ce2f9c1cedd04531ccd4010b07a74836b4d9
+  .claude/skills/guideline-0002-observability/SKILL.md: sha256:703ffb8c41c7accf1551c471d30d5895dbc453c000b5c02e4e1b90685164d610
+  .claude/skills/guideline-0003-rest/SKILL.md: sha256:5d72909317f9dfddd20ee4cdccc68ead1e9f422d37d2eece5d6705eaaf15e6da
+  .claude/skills/guideline-0003-rest/reference.md: sha256:6f3c6704aae98209e159306bb2e7e9c5fbdb5f1fee0920b6d469a7e7b6ff815e
+  .claude/skills/guideline-0004-ai-guidelines/SKILL.md: sha256:b2b8aa233ce90bbabd2d95680c918eac0bd5c3c67d95d8d020fd819da36cf3c7
+  .claude/skills/guideline-0004-ai-guidelines/reference.md: sha256:1a34de38021dcc29bead239c77efec9dbcf82d6bf5739a4734ad31ac78617b33
+  .claude/skills/guideline-0005-logging-guideline/SKILL.md: sha256:68f307958e86c7fa735cb86686f8dc90e1f85908775270a47a8770cdf1e926b5
+  .claude/skills/guideline-0005-logging-guideline/reference.md: sha256:3c8f592b72efc579ae301e87808270e3b3c0db9be10847f7511c2376d6d15ce0
