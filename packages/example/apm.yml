@@ -3,6 +3,24 @@ version: 0.1.0
 description: Minimal example skill, proving the agent-control -> agent-marketplace publish pipeline end to end.
 license: LicenseRef-IMTF-Proprietary
 
+targets:
+  - claude
+  - codex
+
+includes: auto
+
 # This version is for `apm install` fidelity only -- the marketplace version
 # published to agent-marketplace is calendar-based and derived from git tags
 # by scripts/publish.py, not from this field.
+
+dependencies:
+  apm:
+    # mattpocock/skills (MIT) — requirement extraction before planning:
+    - mattpocock/skills/skills/productivity/grill-me#2ab958093e83e0ec752e6c1c5932da465bf23e0c
+
+scripts:
+  # Resolve dependencies + record provenance, then pack a self-contained
+  # bundle (plugin.json + skills/, own skill and every resolved dependency
+  # flattened in). The bundle needs no apm.yml and no network to install --
+  # it's a plain plugin.json + skills/ directory Claude/Codex load natively.
+  pack: "apm install --frozen && apm pack --format agent-plugin -o build --archive --force"

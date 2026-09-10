@@ -1,22 +1,37 @@
 name: agent-control
 version: 0.1.0
-description: Source of truth for IMTF-managed agent skills -- authored here, published to agent-marketplace.
-author: imtf-group
-license: LicenseRef-IMTF-Proprietary
-
-includes: auto
+description: APM project for agent-control
+author: Luca Pillonel
+# Which agent platforms to deploy to.
+# Resolution order: --target flag > this field > auto-detect from filesystem.
+# Accepted values: agent-skills, antigravity, claude, codex, copilot, cursor, gemini, grok-build, hermes, kiro, opencode, vscode, windsurf
+targets:
+  - claude
+  - codex
 
 dependencies:
   apm: []
   mcp: []
 
-# agent-marketplace carries no APM configuration of its own -- package
-# metadata for the published manifests (description, category) lives in
-# marketplace.yml here instead. See scripts/publish.py.
+includes: auto
+
+devDependencies:
+  apm: []
+
 scripts:
-  # The pre-merge gate. No marketplace checkout needed.
-  check: "python scripts/check.py --repo ."
+  # The pre-merge gate. No marketplace checkout needed. --repo defaults to
+  # ".", so only --marketplace (not derivable -- its sibling path varies per
+  # clone) needs spelling out below.
+  check: "python3 scripts/check.py"
   # Preview what a publish would bump and pack, writing nothing.
-  publish-dry-run: "python scripts/publish.py --repo . --marketplace ../agent-marketplace --dry-run"
-  # Pack, commit, tag and push both repos. What the CI publish workflow runs.
-  publish: "python scripts/publish.py --repo . --marketplace ../agent-marketplace --push"
+  publish-dry-run: "python3 scripts/publish.py --marketplace ../agent-marketplace --dry-run"
+  # Pack, commit, and tag both repos locally (no push -- see scripts/publish.py --help).
+  publish: "python3 scripts/publish.py --marketplace ../agent-marketplace"
+  # Same as publish, but also pushes both repos.
+  publish-push: "python3 scripts/publish.py --marketplace ../agent-marketplace --push"
+
+# No 'marketplace:' block here: agent-marketplace carries no APM
+# configuration of its own and isn't discovered via `apm marketplace add`
+# against this repo -- scripts/publish.py packs packages/* into it directly
+# (see the `publish*` scripts above). apm's native marketplace producer
+# feature is unused by this repo's actual publishing path.

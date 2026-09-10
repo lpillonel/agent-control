@@ -1,12 +1,20 @@
-"""Tiny git subprocess wrapper shared by check.py and publish.py."""
+"""Tiny subprocess wrapper shared by check.py and publish.py (git and apm)."""
+
 import subprocess
 import sys
 
 
-def git(args, cwd, check=True):
-    result = subprocess.run(["git"] + args, cwd=cwd, capture_output=True, text=True)
+def run(cmd, cwd, check=True):
+    result = subprocess.run(
+        cmd, cwd=cwd, capture_output=True, text=True, check=False
+    )
     if check and result.returncode != 0:
-        sys.stderr.write("git %s failed in %s\n%s\n"
-                          % (" ".join(args), cwd, result.stderr.strip()))
+        sys.stderr.write(
+            f"{' '.join(cmd)} failed in {cwd}\n{result.stdout}{result.stderr}\n"
+        )
         raise SystemExit(1)
     return result.stdout.strip()
+
+
+def git(args, cwd, check=True):
+    return run(["git"] + args, cwd, check=check)

@@ -1,30 +1,49 @@
-"""Tiny marketplace.yml reader -- no YAML dependency, just enough structure
-for a flat list of package entries with scalar fields.
+"""Local package discovery -- scans packages/*/apm.yml for the scalar
+fields publish.py and check.py need. No YAML dependency: apm.yml's
+top-level values are plain `key: value` lines, so a line scan is enough
+(indented/nested keys, e.g. under `dependencies:`, are skipped).
 """
-import io
+
 import os
-import sys
+
+SCALAR_FIELDS = ("name", "version", "description", "license", "category")
+
+
+def _read_scalars(path):
+    values = {}
+    with open(path, encoding="utf-8") as f:
+        for raw in f:
+            line = raw.split("#", 1)[0].rstrip("\n")
+            if not line or line[0] in " \t" or ":" not in line:
+                continue
+            key, _, value = line.partition(":")
+            key = key.strip()
+            value = value.strip().strip("'\"")
+            if key in SCALAR_FIELDS and value:
+                values[key] = value
+    return values
 
 
 def load(repo):
-    path = os.path.join(repo, "marketplace.yml")
-    if not os.path.isfile(path):
-        sys.stderr.write("no marketplace.yml at %s\n" % path)
-        raise SystemExit(1)
+    """One entry per packages/<dir> with an apm.yml, in directory order."""
+    packages_root = os.path.join(repo, "packages")
     entries = []
-    current = None
-    for raw in io.open(path, encoding="utf-8"):
-        line = raw.split("#", 1)[0].rstrip("\n")
-        stripped = line.strip()
-        if not stripped:
+    if not os.path.isdir(packages_root):
+        return entries
+    for dirname in sorted(os.listdir(packages_root)):
+        source = f"packages/{dirname}"
+        apm_yml = os.path.join(packages_root, dirname, "apm.yml")
+        if not os.path.isfile(apm_yml):
             continue
-        if stripped.startswith("- name:"):
-            if current:
-                entries.append(current)
-            current = {"name": stripped.split(":", 1)[1].strip()}
-        elif current is not None and ":" in stripped:
-            key, _, value = stripped.partition(":")
-            current[key.strip()] = value.strip().strip("\"'")
-    if current:
-        entries.append(current)
+        values = _read_scalars(apm_yml)
+        entries.append(
+            {
+                "name": values.get("name", dirname),
+                "source": source,
+                "description": values.get("description", ""),
+                "version": values.get("version", "0.0.0"),
+                "license": values.get("license", ""),
+                "category": values.get("category", ""),
+            }
+        )
     return entries
