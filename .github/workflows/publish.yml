@@ -35,7 +35,7 @@ jobs:
           if [ -z "$MARKETPLACE_TOKEN" ]; then
             echo "::error::agent-marketplace is private and this workflow pushes" \
                  "to it. Set the MARKETPLACE_TOKEN secret to a PAT with" \
-                 "contents:write on imtf-group/agent-marketplace."
+                 "contents:write on lpillonel/agent-marketplace."
             exit 1
           fi
 
@@ -50,8 +50,7 @@ jobs:
       - name: Check out agent-marketplace
         uses: actions/checkout@v5
         with:
-          # TODO: update once agent-marketplace exists on GitHub.
-          repository: imtf-group/agent-marketplace
+          repository: lpillonel/agent-marketplace
           path: agent-marketplace
           fetch-depth: 0
           token: ${{ secrets.MARKETPLACE_TOKEN }}
@@ -61,6 +60,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Install APM
+        # publish.py shells out to `apm install`/`apm pack` per package.
+        run: curl -sSL https://aka.ms/apm-unix | sh
+
       - name: Pack and publish
         working-directory: agent-control
-        run: python3 scripts/publish.py --repo . --marketplace ../agent-marketplace --push
+        run: python3 scripts/publish.py --marketplace ../agent-marketplace --push

@@ -23,4 +23,4 @@ jobs:
         # This is the only validation in the whole pipeline: everything that
         # reaches agent-marketplace has already passed this, so the
         # marketplace repo carries no gate of its own.
-        run: python3 scripts/check.py --repo .
+        run: python3 scripts/check.py
